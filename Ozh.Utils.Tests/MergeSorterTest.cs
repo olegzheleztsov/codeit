@@ -4,12 +4,12 @@ using Ozh.Utils.Sorting;
 
 namespace Ozh.Utils.Tests
 {
-    public class SelectionSorterTest
+    public class MergeSorterTest
     {
         [Fact]
-        public void Selection_Sorter_Should_Sort_Correctly()
+        public void Merge_Sorter_Should_Sort_Correctly()
         {
-            var sorter = new SelectionSorter<int>((a, b) => a.CompareTo(b));
+            var sorter = new MergeSorter<int>((a, b) => a.CompareTo(b));
             var input = new int[] { 5, 2, 4, 6, 1, 3 };
             var emptyInput = new int[] { };
             sorter.Sort(input);
@@ -19,9 +19,9 @@ namespace Ozh.Utils.Tests
         }
 
         [Fact]
-        public void Selection_Sort_Should_Correctly_Sort_In_Decreasing_Order()
+        public void Merge_Sort_Should_Correctly_Sort_In_Decreasing_Order()
         {
-            var sorter = new SelectionSorter<int>((a, b) => b.CompareTo(a));
+            var sorter = new MergeSorter<int>((a, b) => b.CompareTo(a));
             var input = new int[] { 5, 2, 4, 6, 1, 3 };
             var emptyInput = new int[] { };
             sorter.Sort(input);
